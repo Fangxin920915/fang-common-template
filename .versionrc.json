@@ -1,0 +1,49 @@
+{
+  "header": "# 更新日志\n\n本项目的所有重要变更都将记录在此文件中。\n",
+  "types": [
+    { "type": "feat", "section": "✨ 新功能" },
+    { "type": "fix", "section": "🐛 Bug 修复" },
+    { "type": "perf", "section": "⚡ 性能优化" },
+    { "type": "refactor", "section": "♻️ 代码重构" },
+    { "type": "docs", "section": "📝 文档更新" },
+    { "type": "style", "section": "💄 代码样式" },
+    { "type": "test", "section": "✅ 测试" },
+    { "type": "build", "section": "👷 构建系统" },
+    { "type": "ci", "section": "🔧 持续集成" },
+    { "type": "chore", "section": "🔨 其他更新" }
+  ],
+  "skip": {
+    "bump": false,
+    "changelog": false,
+    "commit": false,
+    "tag": false
+  },
+  "releaseCommitMessageFormat": "chore(release): v{{currentTag}}",
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/fang-ui/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/fang-utils/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/fang-shared/package.json",
+      "type": "json"
+    }
+  ],
+  "packageFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    }
+  ],
+  "scripts": {
+    "postchangelog": "prettier --write CHANGELOG.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "fang-common",
+  "version": "1.2.3",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "doc:dev": "pnpm --filter @fang-common/docs dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "lint:style": "turbo run lint:style",
+    "lint:style:fix": "turbo run lint:style:fix",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "lint:all": "turbo run lint lint:style ",
+    "fix:all": "turbo run lint:fix lint:style:fix format",
+    "clean": "turbo run clean",
+    "clean:cache": "rimraf .turbo node_modules/.cache",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "lint-staged": "npx lint-staged",
+    "push": "git push --follow-tags",
+    "publish:all": "pnpm publish -r --registry 你的私有仓库地址 --no-git-checks",
+    "uv": "pnpm changeset && pnpm changeset version"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.33.0",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^24.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-vue": "^10.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "postcss-html": "^1.8.0",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.6.2",
+    "sass": "^1.90.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.2",
+    "vue-eslint-parser": "^10.2.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}

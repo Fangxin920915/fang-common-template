@@ -1,0 +1,11 @@
+// tsconfig.packages.json
+// 所有包共享的 TypeScript 构建配置
+{
+  "extends": "./tsconfig.src.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "./",
+    "outDir": "./dist"
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@fang-common/ui",
+  "version": "1.2.3",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
+    "lint:style": "stylelint \"src/**/*.{css,scss,vue}\"",
+    "lint:style:fix": "stylelint \"src/**/*.{css,scss,vue}\" --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,vue,css,scss,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,vue,css,scss,json}\""
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/fang-ui"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.22",
+    "@fang-common/shared": "workspace:^",
+    "@fang-common/utils": "workspace:^"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  }
+}

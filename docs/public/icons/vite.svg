@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 404" width="64" height="64">
+  <defs>
+    <linearGradient id="vite-grad1" x1="6" y1="33" x2="235" y2="344" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#41D1FF"/>
+      <stop offset="1" stop-color="#BD34FE"/>
+    </linearGradient>
+    <linearGradient id="vite-grad2" x1="194.651" y1="8.818" x2="236.076" y2="292.989" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEA83"/>
+      <stop offset=".083" stop-color="#FFDD35"/>
+      <stop offset="1" stop-color="#FFA800"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#vite-grad1)" d="M229.8 403.9L23.5 366.5 0 169.8 213.3 0l196.7 160.9-32.5 214.2-147.7 28.8z"/>
+  <path fill="url(#vite-grad2)" d="M355.8 113.3L234.2 15.8l-97.3 112.5-119.7-4.7L0 337.7l208.3 66.2 201.7-62.5-54.2-228.1z"/>
+</svg>
+

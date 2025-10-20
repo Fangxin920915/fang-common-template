@@ -1,0 +1,75 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**", "!**/*.md", "!**/*.test.{ts,tsx,js,jsx}"],
+      "outputs": ["dist/**", ".vitepress/dist/**"],
+      "cache": true
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
+    "preview": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": true
+    },
+    "lint:fix": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": false,
+      "outputs": []
+    },
+    "lint:style": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": true
+    },
+    "lint:style:fix": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": false,
+      "outputs": []
+    },
+    "format": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": false,
+      "outputs": []
+    },
+    "format:check": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!{dist,build,coverage,.turbo}/**"],
+      "outputs": ["coverage/**"],
+      "cache": true
+    },
+    "clean": {
+      "cache": false
+    }
+  },
+  "globalDependencies": [
+    ".env",
+    ".env.*",
+    "tsconfig.json",
+    "tsconfig.*.json",
+    "eslint.config.js",
+    ".prettierrc",
+    ".stylelintrc.json",
+    "vite.config.ts"
+  ],
+  "globalEnv": ["NODE_ENV", "CI"]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@fang-common/shared",
+  "version": "1.2.3",
+  "type": "module",
+  "main": "./dist/umd/fangshared.umd.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/umd/fangshared.umd.js"
+    },
+    "./*": "./dist/es/*.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "shared",
+    "common",
+    "typescript"
+  ],
+  "author": "Fang Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "packages/fang-shared"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json}\""
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  }
+}

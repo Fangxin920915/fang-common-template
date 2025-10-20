@@ -1,0 +1,50 @@
+# 依赖目录
+node_modules/
+**/node_modules/
+
+# 构建输出目录
+dist/
+**/dist/
+build/
+**/build/
+**/.vitepress/dist/
+**/.vitepress/cache/
+
+# 压缩文件
+*.min.js
+*.min.css
+
+# Turbo 缓存
+.turbo/
+**/.turbo/
+
+# 测试覆盖率
+coverage/
+**/coverage/
+
+# 日志文件
+*.log
+
+# 锁文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Git
+.git/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+.cache/
+**/.cache/
+
+# 自动生成的文件
+CHANGELOG.md

@@ -1,0 +1,37 @@
+{
+  "name": "@fang-common/utils",
+  "version": "1.2.3",
+  "type": "module",
+  "main": "./dist/umd/fangutils.umd.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/umd/fangutils.umd.js"
+    },
+    "./*": "./dist/es/*.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Fang Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "packages/fang-utils"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json}\""
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}

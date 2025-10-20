@@ -1,0 +1,36 @@
+# .gitignore
+
+# 依赖
+node_modules
+
+# 构建产物
+dist
+build
+*.log
+
+# Turborepo 缓存
+.turbo
+
+# 编辑器
+.vscode/*
+!.vscode/settings.json
+.idea
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 测试覆盖率
+coverage
+
+# 临时文件
+*.tmp
+.cache

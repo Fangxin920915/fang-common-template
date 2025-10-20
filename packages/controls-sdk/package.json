@@ -1,0 +1,41 @@
+{
+  "name": "@fang-common/controls-sdk",
+  "version": "1.0.11",
+  "description": "机库、无人机相关控制SDK",
+  "type": "module",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "你的仓库地址",
+    "directory": "packages/controls-sdk"
+  },
+  "peerDependencies": {
+    "lodash-es": ">=4.17.21",
+    "mqtt": ">=5.13.0",
+    "mitt": ">=3.0.1"
+  },
+  "publishConfig": {
+    "registry": "你的私有仓库地址"
+  }
+}

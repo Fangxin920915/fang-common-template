@@ -1,0 +1,41 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss", "stylelint-config-recommended-vue"],
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html"
+    },
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ],
+  "rules": {
+    "color-hex-length": "short",
+    "color-named": null,
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+    "selector-max-universal": 1,
+    "shorthand-property-no-redundant-values": true,
+    "comment-whitespace-inside": "always",
+    "max-nesting-depth": 4,
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-disallowed-list": ["scss"],
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/selector-no-redundant-nesting-selector": true
+  },
+  "ignoreFiles": [
+    "node_modules/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vitepress/dist/**",
+    "**/.vitepress/cache/**",
+    "**/*.min.css",
+    "**/*.min.js",
+    "coverage/**",
+    "**/coverage/**",
+    "**/.turbo/**",
+    ".turbo/**"
+  ]
+}
