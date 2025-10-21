@@ -24,31 +24,31 @@
 
 ## 📝 使用方式
 
-### Vue 组件库（gdu-ui）
+### Vue 组件库（fang-ui）
 
 ```typescript
-// packages/gdu-ui/vite.config.ts
+// packages/fang-ui/vite.config.ts
 import { generateVueConfig } from '../../build/build.config'
 
 export default generateVueConfig({
-  name: 'GduUi',
+  name: 'FangUi',
   entry: './src/index.ts',
-  external: ['@gdu-common/utils', '@gdu-common/shared'],
+  external: ['@fang-common/utils', '@fang-common/shared'],
   globals: {
-    '@gdu-common/utils': 'GduUtils',
-    '@gdu-common/shared': 'GduShared',
+    '@fang-common/utils': 'FangUtils',
+    '@fang-common/shared': 'FangShared',
   },
 })
 ```
 
-### 普通库（gdu-utils, gdu-shared）
+### 普通库（fang-utils, fang-shared）
 
 ```typescript
-// packages/gdu-utils/vite.config.ts
+// packages/fang-utils/vite.config.ts
 import { generateConfig } from '../../build/build.config'
 
 export default generateConfig({
-  name: 'GduUtils',
+  name: 'FangUtils',
   entry: './src/index.ts',
   external: ['lodash-es'],
   globals: {
