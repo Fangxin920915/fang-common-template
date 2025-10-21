@@ -1,0 +1,39 @@
+{
+  "name": "@gdu-common/build-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./build.config.ts",
+  "types": "./build.config.ts",
+  "exports": {
+    ".": "./build.config.ts"
+  },
+  "scripts": {
+    "test": "echo test",
+    "clean": "rimraf .turbo",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,json}\""
+  },
+  "peerDependencies": {
+    "vite": ">=3.0.0",
+    "vue": ">=3.3"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "type-fest": "^4.32.0",
+    "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "devDependencies": {
+    "rollup-plugin-visualizer": "^5.14.0",
+    "terser": "^5.37.0",
+    "typescript": "^5.9.2"
+  }
+}
