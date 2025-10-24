@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@fang-common/ui": ["../packages/ui/src"],
+      "@fang-common/shared": ["../packages/shared/src"],
+      "@fang-common/utils": ["../packages/utils/src"],
+      "@fang-common/controls-sdk": ["../packages/controls-sdk/src"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.vue", "**/*.tsx", ".vitepress/**/*.ts", ".vitepress/**/*.vue"]
+}
